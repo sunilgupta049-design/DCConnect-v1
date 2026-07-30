@@ -1,76 +1,278 @@
+/* ===========================
+   DC Connect - Main Stylesheet
+=========================== */
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ===========================
+   Header
+=========================== */
+
 header{
     background:#1e3a8a;
     color:white;
-    padding:20px;
     text-align:center;
+    padding:20px;
 }
 
-/* ===== Login Page ===== */
-
-.login-container {
-    width: 400px;
-    max-width: 90%;
-    margin: 50px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+header h1{
+    font-size:42px;
 }
 
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 10px;
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+    background:#2563eb;
+    text-align:center;
+    padding:15px;
 }
 
-.login-container p {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #666;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+    font-weight:bold;
 }
 
-.login-container label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
+nav a:hover{
+    color:#ffd700;
 }
 
-.login-container input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
 }
 
-.login-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
-    font-size: 14px;
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
 }
 
-.login-options a {
-    text-decoration: none;
-    color: #2563eb;
+.hero p{
+    font-size:22px;
+    color:#555;
+    margin-bottom:30px;
 }
 
-.login-container button {
-    width: 100%;
-    padding: 12px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-size:18px;
+    transition:0.3s;
 }
 
-.login-container button:hover {
-    background: #1e40af;
+.btn:hover{
+    background:#1e40af;
 }
 
-.register-link {
-    text-align: center;
-    margin-top: 20px;
+/* ===========================
+   Services
+=========================== */
+
+.services{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:60px 20px;
+}
+
+.card{
+    width:260px;
+    background:white;
+    border-radius:10px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.5;
+}
+
+/* ===========================
+   Login Page
+=========================== */
+
+.login-container{
+    width:400px;
+    max-width:90%;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.login-container h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.login-container p{
+    text-align:center;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.login-container label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:6px;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="text"]{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+/* Show Password */
+
+.show-password{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:12px;
+}
+
+.show-password label{
+    margin:0;
+    font-weight:normal;
+}
+
+.show-password input{
+    width:auto;
+}
+
+/* Remember Me */
+
+.login-options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:18px 0;
+}
+
+.login-options label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:0;
+    font-weight:normal;
+}
+
+.login-options input{
+    width:auto;
+}
+
+.login-options a{
+    text-decoration:none;
+    color:#2563eb;
+}
+
+.login-options a:hover{
+    text-decoration:underline;
+}
+
+.login-container button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-container button:hover{
+    background:#1e40af;
+}
+
+.register-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.register-link a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.register-link a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .services{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .login-container{
+        width:95%;
+    }
+
 }
