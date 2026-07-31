@@ -1,3 +1,5 @@
+// Show / Hide Password
+
 const showPassword = document.getElementById("showPassword");
 const password = document.getElementById("password");
 
