@@ -41,15 +41,14 @@ nav{
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 2px 8px rgba(0,0,0,.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
-
 nav a{
     color:white;
     text-decoration:none;
     margin:15px;
     font-weight:bold;
-    transition:.3s;
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -59,23 +58,25 @@ nav a:hover{
 /* ===========================
    Hero Section
 =========================== */
-
 .hero{
     text-align:center;
     padding:120px 20px;
-    background:#eef5ff;
+    background:
+        linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)),
+        url("../images/banner.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero p{
+    color:Black;
+    font-size:22px;
+    margin-top:20px;
 }
 
 .hero h1{
     font-size:55px;
-    color:#1e3a8a;
     margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    color:#555;
-    margin-top:15px;
 }
 
 .btn{
@@ -89,7 +90,6 @@ nav a:hover{
     font-size:18px;
     transition:.3s;
 }
-
 .btn:hover{
     background:#1e40af;
 }
@@ -112,14 +112,14 @@ nav a:hover{
     border-radius:10px;
     padding:25px;
     text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.03);
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
+    transform:translateY(-8px);
 }
+
 .card h2{
     margin-bottom:12px;
 }
@@ -128,23 +128,9 @@ nav a:hover{
     color:#666;
     line-height:1.5;
 }
-.card-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 22px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    transition:.3s;
-    transition:all .3s;
-}
-.card-btn:hover{
-    background:#1e40af;
-    transform:scale(1.05);
-}
+
 /* ===========================
-   Login & Register Page
+   Login Page
 =========================== */
 
 .login-container{
@@ -175,10 +161,9 @@ nav a:hover{
     margin-bottom:6px;
 }
 
-.login-container input[type="text"],
 .login-container input[type="email"],
 .login-container input[type="password"],
-.login-container input[type="tel"]{
+.login-container input[type="text"]{
     width:100%;
     padding:12px;
     border:1px solid #ccc;
@@ -192,16 +177,16 @@ nav a:hover{
     display:flex;
     align-items:center;
     gap:8px;
-    margin-top:15px;
-}
-
-.show-password input{
-    width:auto;
+    margin-top:12px;
 }
 
 .show-password label{
     margin:0;
     font-weight:normal;
+}
+
+.show-password input{
+    width:auto;
 }
 
 /* Remember Me */
@@ -210,15 +195,15 @@ nav a:hover{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin:20px 0;
+    margin:18px 0;
 }
 
 .login-options label{
     display:flex;
     align-items:center;
     gap:8px;
-    font-weight:normal;
     margin:0;
+    font-weight:normal;
 }
 
 .login-options input{
@@ -266,18 +251,6 @@ nav a:hover{
 }
 
 /* ===========================
-   Footer
-=========================== */
-
-footer{
-    background:#1e3a8a;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-
-/* ===========================
    Responsive
 =========================== */
 
@@ -308,132 +281,12 @@ footer{
     .login-container{
         width:95%;
     }
-}
-/* Footer */
 
+}
 footer{
     background:#1e3a8a;
     color:white;
     text-align:center;
-    padding:40px 20px;
-    margin-top:50px;
-}
-
-.footer-links{
-    margin:20px 0;
-}
-
-.footer-links a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
-
-.footer-links a:hover{
-    color:#ffd700;
-}
-
-footer p{
-    margin:10px 0;
-}
-
-.copyright{
-    margin-top:25px;
-    color:#ddd;
-    font-size:14px;
-}
-/* Matrimony Search */
-
-.search-box{
-    background:white;
-    width:90%;
-    max-width:900px;
-    margin:40px auto;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-    text-align:center;
-}
-
-.search-box h2{
-    margin-bottom:20px;
-    color:#1e3a8a;
-}
-
-.search-box input,
-.search-box select{
-    padding:12px;
-    width:220px;
-    margin:10px;
-    border:1px solid #ccc;
-    border-radius:6px;
-}
-
-.search-box button{
-    padding:12px 25px;
-    background:#2563eb;
-    color:white;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-.search-box button:hover{
-    background:#1e40af;
-}
-.card img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
-    border:4px solid #2563eb;
-}
-/* ===========================
-   Profile Page
-=========================== */
-
-.profile-container{
-    display:flex;
-    justify-content:center;
-    padding:60px 20px;
-}
-
-.profile-card{
-    width:450px;
-    background:#fff;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-    text-align:center;
-}
-
-.profile-card img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #2563eb;
-    margin-bottom:20px;
-}
-
-.profile-card h2{
-    color:#1e3a8a;
-    margin-bottom:20px;
-}
-
-.profile-card h3{
-    margin-top:25px;
-    margin-bottom:10px;
-    color:#2563eb;
-}
-
-.profile-card p{
-    margin:10px 0;
-    line-height:1.7;
-}
-
-.profile-card .btn{
-    margin-top:25px;
+    padding:20px;
+    margin-top:40px;
 }
